@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>再访 · 澳客</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #f4f5f7;
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      color: #2c3e50;
+      line-height: 1.7;
+      padding: 2rem 1.5rem;
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 28px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02);
+      padding: 2.8rem 2.5rem;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem 0.8rem;
+      }
+      .container {
+        padding: 1.8rem 1.2rem;
+        border-radius: 20px;
+      }
+    }
+
+    .opening {
+      font-size: 1.3rem;
+      font-weight: 450;
+      color: #1e293b;
+      margin-bottom: 1.8rem;
+      letter-spacing: 0.01em;
+      border-left: 3px solid #94a3b8;
+      padding-left: 1.2rem;
+    }
+
+    .intro-card,
+    .features-card,
+    .scene-card,
+    .closing-card {
+      background: #fafbfc;
+      border: 1px solid #e9edf2;
+      border-radius: 20px;
+      padding: 1.6rem 1.8rem;
+      margin: 2rem 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+      transition: box-shadow 0.2s ease;
+    }
+
+    .intro-card:hover,
+    .features-card:hover,
+    .scene-card:hover,
+    .closing-card:hover {
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+    }
+
+    .card-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+      color: #64748b;
+      border: 1px solid #dce1e8;
+      padding: 0.1rem 0.8rem;
+      border-radius: 30px;
+      margin-bottom: 0.6rem;
+      background: #f1f4f8;
+    }
+
+    h2 {
+      margin-top: 0.1rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      font-size: 1.4rem;
+      color: #1e293b;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      font-size: 1rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 0.8rem;
+    }
+
+    .feature-list li {
+      flex: 1 1 200px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 40px;
+      padding: 0.5rem 1rem 0.5rem 1.4rem;
+      font-size: 0.95rem;
+      color: #1e293b;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+      display: flex;
+      align-items: center;
+    }
+
+    .feature-list li::before {
+      content: "•";
+      color: #5b7a9a;
+      font-weight: 700;
+      display: inline-block;
+      width: 1rem;
+    }
+
+    a {
+      color: #1e4e6b;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s ease;
+      font-weight: 480;
+    }
+
+    a:hover {
+      border-bottom-color: #1e4e6b;
+    }
+
+    .quiet-link {
+      color: #366680;
+    }
+
+    .faq-mini {
+      margin-top: 1.8rem;
+      padding: 1.2rem 1.4rem;
+      background: #f2f5f9;
+      border-radius: 18px;
+      border: 1px solid #dfe5ed;
+    }
+
+    .faq-mini details {
+      margin-bottom: 0.5rem;
+    }
+
+    .faq-mini summary {
+      font-weight: 500;
+      cursor: pointer;
+      padding: 0.1rem 0;
+      color: #1f3a4b;
+    }
+
+    .faq-mini details p {
+      margin-top: 0.6rem;
+      padding-left: 0.2rem;
+      color: #3c4d5e;
+      font-size: 0.95rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e2e8f0;
+      margin: 2rem 0 1.4rem;
+    }
+
+    .footer-note {
+      text-align: center;
+      color: #6b7a8e;
+      font-size: 0.9rem;
+      margin-top: 2.2rem;
+      border-top: 1px solid #edf2f7;
+      padding-top: 1.8rem;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- 开场短句 -->
+  <div class="opening">
+    有些地方，值得再次驻足。
+  </div>
+
+  <!-- 承接段落 — 从再次访问切入 -->
+  <div class="intro-card">
+    <span class="card-label">重访</span>
+    <p>
+      信息流动得太快，能让人自愿折返的站点并不多。再次打开浏览器书签、重新输入熟悉的网址——这种动作背后，往往藏着一种朴素的信任：<strong>这里的内容值得重复阅读，这里的工具经得起再次推敲</strong>。
+    </p>
+    <p>
+      当你将光标移至收藏夹，或是直接键入域名时，<a href="https://url-okoo.com">澳客</a> 就静静等在那边。没有过分的加载动效，没有催促你留下的横幅。它只是提供一种结构清晰、调用直接的信息空间，让你从上次停下的地方，继续延伸阅读与比较。
+    </p>
+    <p style="font-size: 0.95rem; color: #4d6278;">
+      “我常把它放在书签栏第一列”——这不是设计上的巧合，而是持续使用后自然形成的位置。
+    </p>
+  </div>
+
+  <!-- 特点列表 卡片式 -->
+  <div class="features-card">
+    <span class="card-label">持续关注者的观察</span>
+    <h2>为什么一再回到这里？</h2>
+    <ul class="feature-list">
+      <li>页面轻量，回应稳定</li>
+      <li>条目归类不重复，适合对比</li>
+      <li>更新节奏可预期，不打扰</li>
+      <li>标记过的内容仍可快速找回</li>
+      <li>没有信息噪音，焦点明确</li>
+    </ul>
+    <p style="margin-top: 1.2rem;">
+      这些特征并非来自大张旗鼓的改版，而是源于对基础体验的坚持。对于长期使用者来说，稳定本身就是一种高级感。
+    </p>
+  </div>
+
+  <!-- 场景段落 — 收藏与关注 -->
+  <div class="scene-card">
+    <span class="card-label">使用场景</span>
+    <p>
+      有人习惯在周末打开收藏夹，逐个浏览积累的链接；有人则将其设为起始页，作为每日信息的前奏。<a href="https://url-okoo.com">澳客</a> 在这两种节奏中都能自然嵌入：它既不会因为数日未访而推送冗余通知，也不会因为频繁刷新而改变内容结构的秩序。
+    </p>
+    <p>
+      真正有价值的资源，往往不是靠奇观吸引眼球，而是以持续的可用性赢得用户的收藏。当你把它添加为书签、或直接记在笔记软件里，就是在用行动表达一种判断：<em>这个入口值得被保留</em>。
+    </p>
+  </div>
+
+  <!-- FAQ摘要 + 温和结尾 -->
+  <div class="closing-card">
+    <span class="card-label">关于长期关注</span>
+    <p>
+      如果你也曾将它放入收藏夹、或是推荐给同行，可能会留意到一些不易察觉的细节：比如链接的响应始终一致，比如不同页面之间的跳转没有多余的转向。这些细小的体验叠加起来，构成了再次访问的真正理由。
+    </p>
+    <div class="faq-mini">
+      <details>
+        <summary>访问频率是否影响使用体验？</summary>
+        <p>不会。无论每日访问还是间隔数周，页面结构与响应速度保持一致，没有基于频次的信息干扰。</p>
+      </details>
+      <details>
+        <summary>收藏链接后会不会失效或变更？</summary>
+        <p><a href="https://url-okoo.com" class="quiet-link">澳客</a> 的核心入口长期稳定，内部导航结构也保持着较高的兼容性，减少链接迁移带来的中断感。</p>
+      </details>
+      <details>
+        <summary>是否有必要注册或保存账号？</summary>
+        <p>无需注册即可浏览主体内容。对于需要记录的个人偏好，浏览器书签或笔记工具即可满足。</p>
+      </details>
+    </div>
+    <p style="margin-top: 1.4rem; font-size: 1rem;">
+      一次收藏，代表一次认可；而每一次重新打开，都是对这份认可的再次确认。希望 <strong>澳客</strong> 能继续成为你信息环境里那个安静而可靠的坐标。
+    </p>
+  </div>
+
+  <hr>
+
+  <div class="footer-note">
+    — 不必每次访问都像第一次，但每次都可以像再一次。<br>
+    <span style="display: inline-block; margin-top: 0.6rem;">&nbsp;</span>
+  </div>
+</div>
+</body>
+</html>
